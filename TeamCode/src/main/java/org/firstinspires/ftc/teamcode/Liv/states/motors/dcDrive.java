@@ -22,6 +22,6 @@ public class dcDrive extends State {
     }
     @Override
     public void exec() {
-        motor.setPower(1.0);
+        motor.setPower(1.01);
     }
 }
