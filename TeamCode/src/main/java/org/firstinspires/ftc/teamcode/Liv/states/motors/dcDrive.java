@@ -11,17 +11,21 @@ import org.engine.State;
 
 public class dcDrive extends State {
     private DcMotor motor ;
-    //constructor
+    private double position;
     public dcDrive (Engine localEngine){
         this.engine = localEngine;
     }
-    @Override
-    public void init () {
-        motor = this.engine.hardwareMap.dcMotor.get("motor");
+    public dcDrive (Engine engine, double position) {
+        this.engine = engine;
+        this.position = position;
+        sleep(500);
 
+    public void init (){
+        motor = this.engine.hardwareMap.dcMotor.get("motor");
     }
-    @Override
+
     public void exec() {
-        motor.setPower(1.01);
+        motor.setPower(position);
+            setFinished(true);
     }
 }

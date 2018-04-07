@@ -12,7 +12,7 @@ import org.firstinspires.ftc.teamcode.Liv.states.motors.dcDrive;
 public class TestEngine extends Engine {
     @Override
     public void setProcesses() {
-        addState(new dcDrive(this));
+        addState(new dcDrive(this, 0.5));
 
     }
 
