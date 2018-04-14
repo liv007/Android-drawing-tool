@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.Liv.states.motors;
 
+import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
 import org.engine.Engine;
@@ -11,22 +12,29 @@ import org.engine.State;
 
 public class ServoState extends State {
     private Servo servo;
-    private double position;
+    private double power;
+    private int ticks;
     public ServoState(Engine engine) {
         this.engine = engine;
     }
-    public ServoState (Engine engine, double position) {
+
+    public ServoState (Engine engine, double power, int ticks) {
         this.engine = engine;
-        this.position = position;
-        sleep(500);
+        this.power = power;
+        this.ticks = ticks;
+
     }
+
     @Override
     public void init (){
         servo = engine.hardwareMap.servo.get("servo");
+
     }
+
     @Override
     public void exec() {
-        servo.setPosition(position);
+        servo.setPosition(power);
+
         setFinished(true);
     }
 }

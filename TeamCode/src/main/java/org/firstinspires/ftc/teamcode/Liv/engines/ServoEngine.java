@@ -12,11 +12,11 @@ import org.firstinspires.ftc.teamcode.Liv.states.motors.ServoState;
 public class ServoEngine extends Engine {
     @Override
     public void setProcesses() {
-        addState(new ServoState(this, 0.5));
-        addState(new ServoState(this, 0.0));
-        addState(new ServoState(this, 1.0));
-        addState(new ServoState(this, 0.0));
-        addState(new ServoState(this, -1.0));
+        addState(new ServoState(this, 0.5, 100));
+        addState(new ServoState(this, 0.0, 100));
+        addState(new ServoState(this, 1.0, 100));
+        addState(new ServoState(this, 0.0, 100));
+        addState(new ServoState(this, -1.0, 100));
 
     }
 }
