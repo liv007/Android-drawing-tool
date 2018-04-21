@@ -9,7 +9,7 @@ import org.engine.State;
  * Created by Liv on 4/14/2018.
  */
 
-public class MotorTheSequel extends State {
+public class MotorTheSequel extends State {                                           //block- a chunk of code
     private DcMotor motor;
     private double power;
     private int ticks;
