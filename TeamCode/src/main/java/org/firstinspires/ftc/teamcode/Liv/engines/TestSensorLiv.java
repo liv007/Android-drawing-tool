@@ -16,8 +16,8 @@ public class TestSensorLiv extends Engine {
     @Override
     public void setProcesses() {
 
-        addState(new ATouchSensor(this));
-        addState(new AColorSensor(this));
+
+        addState(new AColorSensor(this, 5));
 
 
     }
