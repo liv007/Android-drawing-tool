@@ -13,9 +13,7 @@ import org.firstinspires.ftc.teamcode.Liv.states.motors.ServoState;
 public class TestEngine extends Engine {
     @Override
     public void setProcesses() {
-        addState(new MotorTheSequel(this, 0.8, 1000));
-        addThreadedState(new ServoState(this, 0.3, 500));
-        addState(new MotorTheSequel(this, -0.8, 1000));
+
 
 
     }

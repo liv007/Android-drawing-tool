@@ -12,24 +12,24 @@ import org.engine.State;
 public class MotorTheSequel extends State {                                           //block- a chunk of code
     private DcMotor motor;
     private double power;
-    private int ticks;
+    //private int ticks;
 
 
-    public MotorTheSequel(Engine engine, double power, int ticks) {
+    public MotorTheSequel(Engine engine, double power) {
         this.engine = engine;
         this.power = power;
-        this.ticks = ticks;
+        //this.ticks = ticks;
         //formatting for how you type in state in TestEngine "(this, -0.8, 500)"
     }
     @Override
     public void init (){
         motor = engine.hardwareMap.dcMotor.get("myDcMotor");
-        motor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        //motor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         //provides information to phone
     }
     @Override
     public void exec() {
-        motor.setTargetPosition(ticks);
+        //motor.setTargetPosition(ticks);
         motor.setPower(power);
         engine.telemetry.addData("Ticks", motor.getCurrentPosition());
         engine.telemetry.update();

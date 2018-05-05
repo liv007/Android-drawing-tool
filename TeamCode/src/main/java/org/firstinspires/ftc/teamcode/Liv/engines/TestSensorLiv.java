@@ -6,16 +6,19 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 import org.engine.Engine;
 import org.firstinspires.ftc.teamcode.Liv.states.motors.MotorTheSequel;
 import org.firstinspires.ftc.teamcode.Liv.states.motors.Sensors.AColorSensor;
+import org.firstinspires.ftc.teamcode.Liv.states.motors.Sensors.ATouchSensor;
 
 /**
  * Created by Liv on 4/21/2018.
  */
-@Autonomous(name = "ColorSensorLiv")
+@Autonomous(name = "TestSensorLiv")
 public class TestSensorLiv extends Engine {
     @Override
     public void setProcesses() {
-        addState(new MotorTheSequel(this, 0.5,));
-        addState(new AColorSensor(this, 14));
+
+        addState(new ATouchSensor(this));
+        addState(new AColorSensor(this));
+
 
     }
 }
